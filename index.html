@@ -48,7 +48,6 @@
    function test() {
 	 tg.expand();
    }
-   document.oncontextmenu = cmenu; function cmenu() { return false; }
    setInterval(test,10);
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
       
