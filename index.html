@@ -48,6 +48,8 @@
 ; 
    Telegram.WebApp.onEvent('viewportChanged', function(){
 	   tg.expand();
+	   tg.viewportHeight = tg.viewportStableHeight;
+	   tg.MainButton.text = "писька";
    });
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
       
