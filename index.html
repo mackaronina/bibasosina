@@ -26,7 +26,9 @@
 </head>
 
 <body>
-	
+   <div>
+   <canvas id="canvas" width="300" height="300"></canvas>
+   </div>
    <p>Можешь рисовать тут письки мышкой или пальцем. Если не работает пашол нахуй</p>
  
 </body>
@@ -37,7 +39,7 @@
    tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
    tg.MainButton.setText("Отправить"); //изменяем текст кнопки иначе
    tg.MainButton.show()
-    let canvas = elt("canvas", {width: 500, height: 300}),
+    let canvas = document.getElementById("canvas"),
     context = canvas.getContext("2d"),
     mouse = { x:0, y:0 },
     draw = false
@@ -45,21 +47,6 @@
    function test() {
 	 tg.expand();
    }
-   function elt(name, attributes) {
-  var node = document.createElement(name);
-  if (attributes) {
-    for (var attr in attributes)
-      if (attributes.hasOwnProperty(attr))
-        node.setAttribute(attr, attributes[attr]);
-  }
-  for (var i = 2; i < arguments.length; i++) {
-    var child = arguments[i];
-    if (typeof child == "string")
-      child = document.createTextNode(child);
-    node.appendChild(child);
-  }
-  return node;
-}
    setInterval(test,10);
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
       
