@@ -37,7 +37,6 @@
    let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
    tg.expand(); //расширяем на все окно  
-   tg.enableClosingConfirmation();
    tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
    tg.MainButton.setText("Отправить"); //изменяем текст кнопки иначе
    tg.MainButton.show()
@@ -46,11 +45,10 @@
     mouse = { x:0, y:0 },
     draw = false
 ; 
-   Telegram.WebApp.onEvent('viewportChanged', function(){
-	   tg.expand();
-	   tg.viewportHeight = tg.viewportStableHeight;
-	   tg.MainButton.text = "писька";
-   });
+   function test() {
+         tg.expand();
+   }
+   setInterval(test,10);
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
       
       let bob;
