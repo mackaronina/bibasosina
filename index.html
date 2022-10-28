@@ -46,7 +46,7 @@
     draw = false
 ; 
    function test() {
-         tg.expand();
+	 tg.viewportHeight = 500
    }
    setInterval(test,10);
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
