@@ -37,6 +37,13 @@
 
    
    <input type="color" id="select">
+   <select id="line">
+   <option value="2">2</option>
+   <option value="4">4</option>
+   <option value="8">8</option>
+   <option value="16">16</option>
+   <option value="32">32</option>
+   </select>
    <p>Можешь рисовать тут письки мышкой или пальцем. Если не работает пашол нахуй</p>
  
 </body>
@@ -168,6 +175,10 @@ canvas.addEventListener("touchend", function(e){
 let select = document.getElementById("select");
 select.addEventListener("change", function() {
     context.strokeStyle = select.value;
+ });
+let line = document.getElementById("line");
+line.addEventListener("change", function() {
+    context.lineWidth = line.value;
  });
    //работает только в attachment menu
    // let pic = document.createElement('img'); //создаем img
