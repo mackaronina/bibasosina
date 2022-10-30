@@ -36,7 +36,7 @@
 	<div><button type="button"><canvas id="canvas" width="300" height="300"></canvas></button></div>
 
    
-   <input type="color">
+   <input type="color" id="select">
    <p>Можешь рисовать тут письки мышкой или пальцем. Если не работает пашол нахуй</p>
  
 </body>
@@ -165,7 +165,10 @@ canvas.addEventListener("touchend", function(e){
     draw = false;
     
 });
-
+let select = document.getElementById("select");
+select.addEventListener("change", function() {
+    context.strokeStyle = select.value;
+ });
    //работает только в attachment menu
    // let pic = document.createElement('img'); //создаем img
    // pic.src = tg.initDataUnsafe.user.photo_url; //задаём src 
