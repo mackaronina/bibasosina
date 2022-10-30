@@ -118,7 +118,6 @@
    context.fillStyle = "white";
    context.fill();
    context.strokeStyle = "black";
-   context.lineCap = "round";
    canvas.addEventListener("mousedown", function(e){
  
       let ClientRect = this.getBoundingClientRect();
@@ -137,7 +136,7 @@
  
         mouse.x = e.clientX - ClientRect.left;
         mouse.y = e.clientY - ClientRect.top;
- 
+        context.lineCap = "round";
         context.lineTo(mouse.x, mouse.y);
         context.stroke();
         
@@ -148,6 +147,7 @@ canvas.addEventListener("mouseup", function(e){
     let ClientRect = this.getBoundingClientRect();
     mouse.x = e.clientX - ClientRect.left;
     mouse.y = e.clientY - ClientRect.top;
+    context.lineCap = "round";
     context.lineTo(mouse.x, mouse.y);
     context.stroke();
     context.closePath();
@@ -173,7 +173,7 @@ canvas.addEventListener("touchstart", function(e){
  
         mouse.x = e.changedTouches[0].clientX - ClientRect.left;
         mouse.y = e.changedTouches[0].clientY - ClientRect.top;
- 
+        context.lineCap = "round";
         context.lineTo(mouse.x, mouse.y);
         context.stroke();
         
@@ -184,6 +184,7 @@ canvas.addEventListener("touchend", function(e){
     let ClientRect = this.getBoundingClientRect();
     mouse.x = e.changedTouches[0].clientX - ClientRect.left;
     mouse.y = e.changedTouches[0].clientY - ClientRect.top;
+    context.lineCap = "round";
     context.lineTo(mouse.x, mouse.y);
     context.stroke();
     context.closePath();
