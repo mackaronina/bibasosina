@@ -25,7 +25,7 @@
 	 color:#cacd58;
       }
       div{
-	 overflow: scroll;
+	 display: flex;
       }
       
  
@@ -33,18 +33,22 @@
 </head>
 
 <body>
-	<div><button type="button"><canvas id="canvas" width="300" height="300"></canvas></button></div>
+	<button type="button"><canvas id="canvas" width="300" height="300"></canvas></button>
 
-   
-   <input type="color" id="select">
-   <select id="line">
-   <option value="2">2</option>
-   <option value="4">4</option>
-   <option value="8">8</option>
-   <option value="16">16</option>
-   <option value="32">32</option>
-   </select>
-   <p>Можешь рисовать тут письки мышкой или пальцем. Если не работает пашол нахуй</p>
+	<div><p>Выбери цвет:  </p>
+   	<input type="color" id="select">
+	</div>
+	<div><p>Выбери толщину:  </p>
+   	<select id="line">
+   	<option value="1">1</option>
+   	<option value="2">2</option>
+   	<option value="4">4</option>
+   	<option value="8">8</option>
+   	<option value="16">16</option>
+   	<option value="32">32</option>
+   	</select>
+	</div>
+  	 <p>Можешь рисовать тут письки мышкой или пальцем. Если не работает пашол нахуй</p>
  
 </body>
 
