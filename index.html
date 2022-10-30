@@ -144,13 +144,14 @@
     }
 });
 canvas.addEventListener("mouseup", function(e){
- 
+    context.lineCap = "round";
     let ClientRect = this.getBoundingClientRect();
     mouse.x = e.clientX - ClientRect.left;
     mouse.y = e.clientY - ClientRect.top;
     context.lineTo(mouse.x, mouse.y);
     context.stroke();
     context.closePath();
+	
     draw = false;
     
 });
