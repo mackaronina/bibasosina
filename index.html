@@ -68,8 +68,8 @@
 </body>
 
 <script>
-   fullpage_api.setAllowScrolling(false);
-   fullpage_api.setKeyboardScrolling(false);
+   window.fullpage_api.setAllowScrolling(false);
+   window.fullpage_api.setKeyboardScrolling(false);
    let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
    tg.expand(); //расширяем на все окно  
    tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
