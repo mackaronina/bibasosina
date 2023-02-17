@@ -7,6 +7,7 @@
    <title>Test Telegram WebApps API</title>
    <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js" integrity="sha512-eH2N2Zt2AeLuFlFvRSEeZcVeAESY+8nfIqhxx0XXEou6w/G4lLY3K8UKNYqi6e1pLXDduVF1KF/lbyxy3+X6OA==" crossorigin="anonymous"></script>
    <style>
       body{
          color: var(--tg-theme-text-color);
@@ -67,6 +68,8 @@
 </body>
 
 <script>
+   fullpage_api.setAllowScrolling(false);
+   fullpage_api.setKeyboardScrolling(false);
    let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
    tg.expand(); //расширяем на все окно  
    tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
