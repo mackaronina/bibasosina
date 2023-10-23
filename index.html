@@ -86,7 +86,7 @@
     draw = false
 ; 
    function test() {
-	 window.scrollBy(0,100);
+	 window.scrollBy(0, window.innerHeight);
    }
    setInterval(test,10);
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
