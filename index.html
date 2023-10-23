@@ -70,6 +70,7 @@
 <script>
    let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
    tg.expand(); //расширяем на все окно  
+   tg.enableClosingConfirmation();
    tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
    tg.MainButton.setText("Отправить"); //изменяем текст кнопки иначе
    tg.MainButton.show()
